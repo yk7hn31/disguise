@@ -1,0 +1,287 @@
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background: var(--bg);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  height: 52px;
+  padding: 0 24px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--divider);
+}
+
+.tab {
+  position: relative;
+  flex: 1;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+
+.tabActive {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tabActive::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: -1px;
+  height: 2px;
+  background: var(--text);
+}
+
+/* Cards */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 10px 0;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 24px;
+}
+
+.account {
+  padding: 24px 20px 22px;
+}
+
+.accountLabel {
+  padding: 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--text);
+}
+
+.accountNumber {
+  margin-left: 2px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-sub);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.balance {
+  margin-top: 2px;
+  padding: 0 4px;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 36px;
+  color: var(--text-strong);
+  letter-spacing: -0.3px;
+}
+
+.actions {
+  display: flex;
+  height: 46px;
+  margin-top: 18px;
+  background: var(--surface-raised);
+  border-radius: 14px;
+}
+
+.actions button {
+  position: relative;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-button);
+}
+
+.actions button + button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: #3d3e43;
+}
+
+.assets {
+  display: flex;
+  flex-direction: column;
+  gap: 14.5px;
+  margin-top: 23px;
+  list-style: none;
+}
+
+.asset {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  gap: 17px;
+}
+
+.assetIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 11px;
+  background: var(--icon-bg);
+  color: var(--text-sub);
+}
+
+.assetLabel {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-sub);
+}
+
+.assetValue {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--text);
+}
+
+.assetSub {
+  margin-left: 1px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-sub);
+}
+
+.negative {
+  margin-left: 1px;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+/* Monthly profit */
+.profit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 25px 0 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.profitValue {
+  color: var(--text-muted);
+}
+
+/* Menu */
+.menu {
+  padding: 11px 25px 12px 24px;
+}
+
+.menuRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.menuRight {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  font-weight: 400;
+}
+
+.valueBlue {
+  color: var(--blue-dim);
+}
+
+.valueGray {
+  color: var(--text-button);
+}
+
+.chevron {
+  display: flex;
+  color: var(--chevron);
+}
+
+/* Exchange rate */
+.rate {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 25px 19px 24px;
+}
+
+.rateTitle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--text);
+}
+
+.rateSub {
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-muted);
+}
+
+.rateRight {
+  text-align: right;
+}
+
+.rateValue {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--text);
+}
+
+.rateChange {
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--blue);
+}
+
+/* Footer */
+.footer {
+  padding: 32px 24px calc(42px + env(safe-area-inset-bottom));
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #bbc3cb;
+  letter-spacing: -0.3px;
+}
+
+.disclaimer {
+  margin-top: 15px;
+  font-size: 13px;
+  line-height: 19.5px;
+  color: var(--text-muted);
+  word-break: keep-all;
+}
+
+.links {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-muted);
+}
+
+.linkSep {
+  opacity: 0.8;
+}

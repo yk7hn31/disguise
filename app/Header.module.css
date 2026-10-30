@@ -1,0 +1,38 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(51px + env(safe-area-inset-top));
+  padding: calc(3px + env(safe-area-inset-top)) 25px 0 20px;
+  background: var(--surface);
+  border-bottom: 1px solid transparent;
+}
+
+.headerScrolled {
+  border-bottom-color: var(--divider);
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 4px;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.manage {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text);
+}

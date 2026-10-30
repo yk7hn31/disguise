@@ -1,0 +1,287 @@
+.page {
+  --text-bright: #e4e4e5;
+  --text-soft: #c3c3c6;
+  --text-label: #7e7e87;
+  --text-group: #9e9ea4;
+  --blue-bright: #3485fa;
+  --chip: #2c2c35;
+  --chip-active: #4d4d59;
+  --chevron-light: #62626d;
+
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background: var(--surface);
+}
+
+.blue {
+  color: var(--blue-bright);
+}
+
+/* Month summary */
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 95px;
+  padding: 8px 24px 0;
+  background: linear-gradient(var(--surface), #222229);
+}
+
+.summaryText {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 23px;
+  color: var(--text-bright);
+}
+
+.summaryChange {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+}
+
+.summaryChange .blue {
+  margin-right: -0.5px;
+}
+
+/* My investment */
+.investment {
+  padding: 32px 0 0 24px;
+}
+
+.investLabel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--text-soft);
+}
+
+.investTotal {
+  margin-top: 1px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+  color: var(--text-strong);
+  letter-spacing: -0.3px;
+}
+
+.feeNote {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--blue);
+}
+
+.feeNote svg {
+  color: var(--blue-bright);
+}
+
+.stats {
+  margin-top: 26px;
+  padding-right: 24px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 27px;
+  font-size: 16px;
+}
+
+.stat dt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-label);
+}
+
+.stat dd {
+  font-size: 15px;
+  color: var(--text-bright);
+}
+
+.stat dd.blue {
+  color: var(--blue-bright);
+}
+
+.weightRow {
+  display: flex;
+  align-items: center;
+  height: 68px;
+  margin-top: 17px;
+  padding-right: 25px;
+  border-top: 1px solid var(--divider);
+}
+
+.weightIcon {
+  display: flex;
+  margin-left: 7px;
+}
+
+.weightLabel {
+  flex: 1;
+  margin-left: 19px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+.chevron {
+  display: flex;
+  color: var(--chevron-light);
+}
+
+/* Holdings */
+.holdings {
+  padding: 15px 24px 40px;
+  border-top: 16px solid var(--bg);
+}
+
+.holdingsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 26px;
+}
+
+.holdingsHeader h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.holdingsHeader button {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+
+.controlsRight {
+  display: flex;
+  gap: 9px;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 27px;
+  padding: 0 8px 0 8px;
+  border-radius: 8px;
+  background: var(--chip);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-group);
+}
+
+.chip svg {
+  color: var(--text-label);
+}
+
+.segment {
+  display: flex;
+  height: 27px;
+  padding: 2.5px;
+  border-radius: 9px;
+  background: var(--chip);
+}
+
+.segment button {
+  padding: 0 6px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-label);
+}
+
+.segment .segmentActive {
+  background: var(--chip-active);
+  color: var(--text-strong);
+}
+
+.currency {
+  min-width: 22px;
+  font-weight: 800;
+}
+
+.groupLabel {
+  margin-top: 32px;
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--text-group);
+}
+
+.stock {
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.stockLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #243e31;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 11px;
+  text-align: center;
+  color: #fff;
+}
+
+.stockName,
+.stockValue {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.stockName {
+  flex: 1;
+  margin-left: 16px;
+}
+
+.stockValue {
+  align-items: flex-end;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.ticker {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--text-bright);
+}
+
+.quantity {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-label);
+}
+
+.price {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--text-bright);
+}

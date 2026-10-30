@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/Header.module.css"],"sourcesContent":[".header {\n  position: sticky;\n  top: 0;\n  z-index: 10;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: calc(51px + env(safe-area-inset-top));\n  padding: calc(3px + env(safe-area-inset-top)) 25px 0 20px;\n  background: var(--surface);\n  border-bottom: 1px solid transparent;\n}\n\n.headerScrolled {\n  border-bottom-color: var(--divider);\n}\n\n.back {\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 4px;\n}\n\n.title {\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  font-size: 17px;\n  font-weight: 600;\n  color: var(--text-strong);\n}\n\n.manage {\n  font-size: 17px;\n  font-weight: 500;\n  color: var(--text);\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;AAaA;;;;AAIA;;;;;;;AAOA;;;;;;;;;AASA"}}]
+}

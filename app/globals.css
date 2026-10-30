@@ -1,0 +1,130 @@
+:root {
+  --bg: #101013;
+  --surface: #17171c;
+  --surface-raised: #28292f;
+  --icon-bg: #2a2b31;
+  --divider: #33333c;
+  --text-strong: #ffffff;
+  --text: #dadfe9;
+  --text-button: #b5bac5;
+  --text-sub: #888d97;
+  --text-muted: #676c77;
+  --chevron: #4f525d;
+  --blue: #3182f6;
+  --blue-dim: #2c69c0;
+  --ease-ios: cubic-bezier(0.32, 0.72, 0, 1);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Press feedback: shrink and dim quickly on press, ease back on release. */
+a,
+button {
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  user-select: none;
+  transition:
+    transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.25s ease;
+}
+
+a:active,
+button:active {
+  transform: scale(0.96);
+  opacity: 0.6;
+  transition-duration: 0.08s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a:active,
+  button:active {
+    transform: none;
+  }
+}
+
+/* Page transitions (see PageTransition.tsx): iOS-style push and pop. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
+::view-transition-group(.pop-exit) {
+  z-index: 1;
+}
+
+::view-transition-new(.push-enter) {
+  animation: 400ms var(--ease-ios) both slide-from-right;
+}
+
+::view-transition-old(.push-exit) {
+  animation: 400ms var(--ease-ios) both slide-to-left-dim;
+}
+
+::view-transition-old(.pop-exit) {
+  animation: 400ms var(--ease-ios) both slide-to-right;
+}
+
+::view-transition-new(.pop-enter) {
+  animation: 400ms var(--ease-ios) both slide-from-left-dim;
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-to-left-dim {
+  to {
+    transform: translateX(-30%);
+    filter: brightness(0.6);
+  }
+}
+
+@keyframes slide-to-right {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-from-left-dim {
+  from {
+    transform: translateX(-30%);
+    filter: brightness(0.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

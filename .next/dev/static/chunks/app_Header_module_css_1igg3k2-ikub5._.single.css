@@ -1,0 +1,41 @@
+/* [project]/app/Header.module.css [app-client] (css) */
+.Header-module__6zK1mW__header {
+  z-index: 10;
+  height: calc(51px + env(safe-area-inset-top));
+  padding: calc(3px + env(safe-area-inset-top)) 25px 0 20px;
+  background: var(--surface);
+  border-bottom: 1px solid #0000;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.Header-module__6zK1mW__headerScrolled {
+  border-bottom-color: var(--divider);
+}
+
+.Header-module__6zK1mW__back {
+  align-items: center;
+  height: 40px;
+  padding: 0 4px;
+  display: flex;
+}
+
+.Header-module__6zK1mW__title {
+  color: var(--text-strong);
+  font-size: 17px;
+  font-weight: 600;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Header-module__6zK1mW__manage {
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=app_Header_module_css_1igg3k2-ikub5._.single.css.map*/
